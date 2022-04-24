@@ -1,0 +1,128 @@
+/* start variablse */
+:root{
+    --Soft-blue : hsl(215, 51%, 70%);
+    --Cyan : hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG : hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG : hsl(216, 50%, 16%);
+    --Very-dark-blue-line : hsl(215, 32%, 27%);
+    --White : hsl(0, 0%, 100%);
+}
+/* end variablse */
+/* start global rulse */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+/* end global rulse */
+/* start section */
+body .section .container {
+    padding: 0 20px;
+    margin: auto;
+}
+body .section .card {
+    width: 320px;
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 15px 80px -60px black;
+}
+.card .image {
+    transition: 0.3s;
+    position: relative;
+    transition: 0.3s;
+}
+.card .image:hover::after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.450);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card .text h2 {
+    margin: 20px 0 15px;
+    color: var(--White);
+    font-weight: 500;
+    transition: 0.3s;
+}
+.card .text h2:hover {
+    color: var(--Cyan);
+}
+.card .text p {
+    margin: 10px 0;
+    color: var(--Soft-blue);
+}
+.card .timeout {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+    padding-bottom: 5px;
+}
+.card .timeout div {
+    display: flex;
+    align-items: center;
+}
+.card .timeout p {
+    margin-left: 5px;
+}
+.card .timeout .ethereum p {
+    color: var(--Cyan);
+    font-weight: 700;
+}
+.card .creater {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+.card .creater .avatar {
+    width: 35px;
+    border: var(--White) 2px solid;
+    border-radius: 5rem;
+}
+.card .creater p {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.card .creater span {
+    color: var(--White);
+    transition: 0.3s;
+}
+.card .creater span:hover {
+    color: var(--Cyan);
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    margin-bottom: 10px;
+    color: var(--White);
+}
+.attribution a {
+    color: var(--Soft-blue);
+}
+/* end section */
